@@ -57,6 +57,7 @@ git checkout 2023.11.x
 make beaglebone_defconfig
 
 ```
+![Kết quả ý 1,2,3](Bt1_Buildroot_1,2,3.jpg)
 
 * * * * *
 
@@ -276,4 +277,5 @@ Tuần 4 đã:
 -   Tích hợp ứng dụng vào hệ thống tự động
 
 * * * * *
+
 
