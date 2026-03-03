@@ -57,7 +57,6 @@ git checkout 2023.11.x
 make beaglebone_defconfig
 
 ```
-![Kết quả ý 1,2,3](Bt1_Buildroot_1,2,3.jpg)
 
 * * * * *
 
@@ -95,7 +94,6 @@ Thiết lập:
         -   `htop`
 
         -   `nano`
-
 * * * * *
 
 ### 5\. Build hệ thống
@@ -111,7 +109,6 @@ Kết quả:
 output/images/sdcard.img
 
 ```
-
 * * * * *
 
 ### 6\. Flash vào thẻ nhớ
@@ -222,7 +219,7 @@ Kết quả:
 Hello BeagleBone Black! Toi la Jap day.
 
 ```
-
+![ketqua](images/Bt2_Buildroot_toochain_4.jpg)
 * * * * *
 
 D. TÍCH HỢP ỨNG DỤNG VÀO BUILDROOT
@@ -277,5 +274,6 @@ Tuần 4 đã:
 -   Tích hợp ứng dụng vào hệ thống tự động
 
 * * * * *
+
 
 
