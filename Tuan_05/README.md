@@ -1,4 +1,4 @@
-# Tuần 5 - Bài tập HDH Nhúng - Biên dịch chéo thư viện và ứng dụng - NHóm 9
+# Tuần 5 - Bài tập HDH Nhúng - Biên dịch chéo thư viện và ứng dụng - Nhóm 9
 ### Bài tập 01: Biên dịch ứng dụng với thư viện đã có
 
 Yêu cầu: Viết 01 chương trình C/C++ có sử dụng thư viện cJSON.
@@ -451,3 +451,4 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
