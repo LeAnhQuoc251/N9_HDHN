@@ -1,5 +1,4 @@
 # Tuần 5 - Bài tập HDH Nhúng - Biên dịch chéo thư viện và ứng dụng - Nhóm 9
-### Bài tập 01: Biên dịch ứng dụng với thư viện đã có
 
 ## Tổng quan dự án
 
@@ -364,6 +363,7 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
 
 
 
