@@ -106,7 +106,6 @@ make
 
 để Buildroot tải và biên dịch thư viện tích hợp vào OS.
 
-* * * * *
 
 2\. Mã nguồn HelloJSON.c
 
@@ -128,7 +127,6 @@ int main() {
 
 ```
 
-* * * * *
 
 3\. Biên dịch chéo và nạp xuống mạch
 
@@ -151,7 +149,6 @@ Copy xuống BBB:
 Sử dụng thẻ nhớ, copy file `HelloJSON` vào thư mục `/root`\
 và file `libcjson.so*` vào `/usr/lib` trên phân vùng rootfs.
 
-* * * * *
 
 4\. Khởi chạy trên BBB
 
@@ -161,7 +158,6 @@ chmod +x HelloJSON
 
 ```
 
-* * * * *
 
 Bài tập 02: Tự tạo thư viện cá nhân
 
@@ -169,7 +165,6 @@ Mục tiêu
 
 Tạo thư viện toán học **mymath** và so sánh thư viện tĩnh / động.
 
-* * * * *
 
 1\. Mã nguồn thư viện mymath.h và mymath.c
 
@@ -192,7 +187,6 @@ int cong_hai_so(int a, int b) {
 
 ```
 
-* * * * *
 
 2\. Biên dịch thư viện (.a và .so)
 
@@ -217,7 +211,6 @@ $CC -shared -o libmymath.so mymath.o
 
 ```
 
-* * * * *
 
 3\. Đưa vào Sysroot
 ```
@@ -228,7 +221,6 @@ cp libmymath.a libmymath.so\
 
 ```
 
-* * * * *
 
 4\. Ứng dụng test_math.c và so sánh
 
@@ -270,7 +262,6 @@ readelf -d app_dynamic
 
 Thấy yêu cầu thư viện `libmymath.so`.
 
-* * * * *
 
 Bài tập 03: Tích hợp ứng dụng và thư viện vào Buildroot
 
@@ -279,7 +270,6 @@ Mục tiêu
 
 Xây dựng ứng dụng **app_kethop** phụ thuộc vào cả **cJSON** và **mymath**.
 
-* * * * *
 
 1\. Mã nguồn ứng dụng app_kethop.c
 
@@ -304,8 +294,6 @@ int main() {
 
 ```
 
-* * * * *
-
 2\. Tạo Package app_kethop trong Buildroot (Ý 4)
 
 Tạo thư mục
@@ -328,8 +316,6 @@ config BR2_PACKAGE_APP_KETHOP
 
 ```
 
-* * * * *
-
 ### File app_kethop.mk
 
 ```
@@ -349,8 +335,6 @@ endef
 $(eval $(generic-package))
 
 ```
-
-* * * * *
 
 3\. Khai báo và Biên dịch (Ý 5)
 
@@ -396,7 +380,6 @@ ls -l output/target/usr/bin/app_kethop
 
 ```
 
-* * * * *
 
 4\. Khởi chạy thành công trên BBB
 
@@ -419,8 +402,6 @@ app_kethop
 
 từ bất cứ đâu.
 
-* * * * *
-
 Kết quả
 
 Màn hình in ra chuỗi JSON
@@ -429,6 +410,7 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
 
 
 
