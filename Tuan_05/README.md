@@ -276,19 +276,25 @@ Xây dựng ứng dụng **app_kethop** phụ thuộc vào cả **cJSON** và **
 
 ```
 #include <stdio.h>
-#include "mymath.h"
+#include <stdlib.h>
 #include <cjson/cJSON.h>
+#include <mymath.h>
 
 int main() {
-    int sum = cong_hai_so(100, 50);
+    int x = 100, y = 50;
+    int ket_qua = cong_hai_so(x, y); // Dùng thư viện mymath
 
+    // Dùng cJSON để đóng gói
     cJSON *root = cJSON_CreateObject();
-    cJSON_AddStringToObject(root, "ten_bai", "Bai Tap 03 - Ket hop");
-    cJSON_AddNumberToObject(root, "tong", sum);
+    cJSON_AddStringToObject(root, "thong_diep", "Ket hop thanh cong cJSON va MyMath");
+    cJSON_AddNumberToObject(root, "so_a", x);
+    cJSON_AddNumberToObject(root, "so_b", y);
+    cJSON_AddNumberToObject(root, "tong", ket_qua);
 
-    char *out = cJSON_Print(root);
-    printf("%s\n", out);
+    char *string = cJSON_Print(root);
+    printf("%s\n", string);
 
+    free(string);
     cJSON_Delete(root);
     return 0;
 }
@@ -411,6 +417,7 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
 
 
 
