@@ -171,7 +171,9 @@ Tạo thư viện toán học **mymath** và so sánh thư viện tĩnh / độn
 // mymath.h
 #ifndef MYMATH_H
 #define MYMATH_H
+
 int cong_hai_so(int a, int b);
+
 #endif
 
 ```
@@ -409,6 +411,7 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
 
 
 
