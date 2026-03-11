@@ -60,7 +60,6 @@ khi cài đặt.
 # Thực hiện 
 
 Tổng quan dự án
----------------
 
 Dự án giải quyết 03 bài toán cốt lõi trong phát triển Linux nhúng:
 
@@ -73,7 +72,6 @@ Tự thiết kế thư viện động (mymath) và quản lý Sysroot.
 * * * * *
 
 Bài tập 01: Biên dịch ứng dụng với thư viện đã có
-=================================================
 
 Mục tiêu
 --------
@@ -83,7 +81,6 @@ Parse gói tin JSON và in lên Terminal BBB.
 * * * * *
 
 1\. Bật cJSON trong Buildroot
------------------------------
 
 Truy cập:
 
@@ -115,7 +112,6 @@ make
 * * * * *
 
 2\. Mã nguồn HelloJSON.c
-------------------------
 
 ```
 #include <stdio.h>
@@ -138,7 +134,6 @@ int main() {
 * * * * *
 
 3\. Biên dịch chéo và nạp xuống mạch
-------------------------------------
 
 Trỏ Toolchain:
 
@@ -162,7 +157,6 @@ và file `libcjson.so*` vào `/usr/lib` trên phân vùng rootfs.
 * * * * *
 
 4\. Khởi chạy trên BBB
-----------------------
 
 ```
 chmod +x HelloJSON
@@ -173,17 +167,14 @@ chmod +x HelloJSON
 * * * * *
 
 Bài tập 02: Tự tạo thư viện cá nhân
-===================================
 
 Mục tiêu
---------
 
 Tạo thư viện toán học **mymath** và so sánh thư viện tĩnh / động.
 
 * * * * *
 
 1\. Mã nguồn thư viện mymath.h và mymath.c
-------------------------------------------
 
 ```
 // mymath.h
@@ -207,7 +198,6 @@ int cong_hai_so(int a, int b) {
 * * * * *
 
 2\. Biên dịch thư viện (.a và .so)
-----------------------------------
 
 Tạo Object file
 
@@ -233,8 +223,6 @@ $CC -shared -o libmymath.so mymath.o
 * * * * *
 
 3\. Đưa vào Sysroot
--------------------
-
 ```
 cp mymath.h ~/workspace/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/
 
@@ -246,7 +234,6 @@ cp libmymath.a libmymath.so\
 * * * * *
 
 4\. Ứng dụng test_math.c và so sánh
------------------------------------
 
 Biên dịch
 
@@ -289,7 +276,6 @@ Thấy yêu cầu thư viện `libmymath.so`.
 * * * * *
 
 Bài tập 03: Tích hợp ứng dụng và thư viện vào Buildroot
-=======================================================
 
 Mục tiêu
 --------
@@ -299,7 +285,6 @@ Xây dựng ứng dụng **app_kethop** phụ thuộc vào cả **cJSON** và **
 * * * * *
 
 1\. Mã nguồn ứng dụng app_kethop.c
-----------------------------------
 
 ```
 #include <stdio.h>
@@ -325,7 +310,6 @@ int main() {
 * * * * *
 
 2\. Tạo Package app_kethop trong Buildroot (Ý 4)
-------------------------------------------------
 
 Tạo thư mục
 
@@ -372,7 +356,6 @@ $(eval $(generic-package))
 * * * * *
 
 3\. Khai báo và Biên dịch (Ý 5)
--------------------------------
 
 Thêm dòng sau vào file:
 
@@ -419,7 +402,6 @@ ls -l output/target/usr/bin/app_kethop
 * * * * *
 
 4\. Khởi chạy thành công trên BBB
----------------------------------
 
 ### Cách 1 (Mount thẻ nhớ Ý 3)
 
@@ -443,7 +425,6 @@ từ bất cứ đâu.
 * * * * *
 
 Kết quả
--------
 
 Màn hình in ra chuỗi JSON
 
@@ -451,4 +432,5 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
 
