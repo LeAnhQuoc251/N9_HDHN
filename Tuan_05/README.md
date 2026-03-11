@@ -69,16 +69,13 @@ Tự thiết kế thư viện động (mymath) và quản lý Sysroot.
 
 Đóng gói ứng dụng thành Package chuẩn, thiết lập ràng buộc phụ thuộc (Dependencies) trong Buildroot.
 
-* * * * *
 
 Bài tập 01: Biên dịch ứng dụng với thư viện đã có
 
 Mục tiêu
---------
 
 Parse gói tin JSON và in lên Terminal BBB.
 
-* * * * *
 
 1\. Bật cJSON trong Buildroot
 
@@ -432,5 +429,6 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
 
 
