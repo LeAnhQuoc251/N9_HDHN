@@ -1,65 +1,7 @@
 # Tuần 5 - Bài tập HDH Nhúng - Biên dịch chéo thư viện và ứng dụng - Nhóm 9
 ### Bài tập 01: Biên dịch ứng dụng với thư viện đã có
 
-Yêu cầu: Viết 01 chương trình C/C++ có sử dụng thư viện cJSON.
-
-1.1. Bật cJSON trong Buildroot và build lại OS tích hợp thư viện cJSON
-
-1.2. Viết chương trình C/C++ có sử dụng thư viện CJSON thực hiện parse 01 gói tin JSON
-thành các trường thông tin và in lên Terminal.
-
-1.3. Thực hiện biên dịch chéo sử dụng Toolchain đã cập nhật ở bước 1 (VD: Tên là
-HelloJSON.c)
-
-1.4. Biên dịch thành công chương trình HelloJSON.c và đưa xuống BBB.
-
-1.5. Khởi chạy thành công chương trình đã biên dịch.
-
-### Bài tập 02: Tự tạo thư viện cá nhân
-
-Yêu cầu: Tự tạo 01 thư viện đơn giản của riêng mình và ứng dụng
-sử dụng thư viện đó
-
-2.1. Viết 01 thư viện đơn giản gồm 01 file .h và 01 file .c thực hiện 1 nhiệm vụ đơn giản như:
-Cộng 2 số, Tìm số nguyên tố.... (tùy ý).
-
-2.2. Biên dịch thành công thư viện ở bước 1 thành: Static Library (.a) và Dynamic Library
-(.so)
-
-2.3. Đưa thư viện đã biên dịch thành công ở bước 2 vào Sysroot.
-
-2.4. Viết chương trình C/C++ có sử dụng thư viện đã tạo
-
-2.5. Biên dịch chương trình với 2 loại thư viện (Thư viện tĩnh và Thư viện động) thành 2
-chương trình.
-
-2.6. Đưa chương trình và thư viện đã biên dịch xuống BBB (Cả 2 chương trình) thử nghiệm
-hoạt động.
-
-2.7. So sánh về kích thước của 2 chương trình đã tạo ở bước (5) về dung lượng, yêu cầu
-phụ thuộc (sử dụng lệnh read-elf dependencies).
-
-### Bài tập 03: Tích hợp ứng dụng và thư viện và Buildroot
-
-Yêu cầu: Xây dựng chương trình có phụ thuộc vào cả 2 thư viện ở
-Bài 1 và Bài 2 vào Buildroot có ràng buộc phụ thuộc.
-
-3.1. Đưa thư viện ở bài 2 vào Buildroot và biên dịch tích hợp thành công
-
-3.2. Viết 01 chương trình C/C++ có sử dụng cả 2 thư viện ở bài 01 và bài 02.
-
-3.3. Biên dịch thành công chương trình và chạy thành công trên BBB
-
-3.4. Viết cấu hình cho chương trình trên Buildroot, chú ý kèm điều kiện phụ thuộc vào 02 thư
-viện đã nêu. (Khi bật (enable) chương trình này, CJSON và thư viện tùy chỉnh tự động
-được kích hoạt).
-
-3.5. Biên dịch lại Buildroot, cài đặt và khởi chạy chương trình thành công trên BBB ngay sau
-khi cài đặt.
-
-# Thực hiện 
-
-Tổng quan dự án
+## Tổng quan dự án
 
 Dự án giải quyết 03 bài toán cốt lõi trong phát triển Linux nhúng:
 
@@ -263,7 +205,11 @@ readelf -d app_dynamic
 
 Thấy yêu cầu thư viện `libmymath.so`.
 
-
+sự phụ thuộc :
+```
+/home/jap/workspace/buildroot/output/host/bin/arm-linux-readelf -d test_dynamic
+/home/jap/workspace/buildroot/output/host/bin/arm-linux-readelf -d test_static
+```
 Bài tập 03: Tích hợp ứng dụng và thư viện vào Buildroot
 
 Mục tiêu
@@ -417,6 +363,7 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
 
 
 
