@@ -210,6 +210,7 @@ sự phụ thuộc :
 /home/jap/workspace/buildroot/output/host/bin/arm-linux-readelf -d test_dynamic
 /home/jap/workspace/buildroot/output/host/bin/arm-linux-readelf -d test_static
 ```
+
 Bài tập 03: Tích hợp ứng dụng và thư viện vào Buildroot
 
 Mục tiêu
@@ -363,6 +364,7 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
 
 
 
