@@ -114,14 +114,13 @@ make
 #include <cjson/cJSON.h>
 
 int main() {
-    const char *json_string = "{\"name\":\"BeagleBone\", \"status\":\"active\"}";
+    const char *json_string = "{\"name\":\"Jap-BBB\",\"lab\":1,\"status\":\"Success\"}";
     cJSON *json = cJSON_Parse(json_string);
-    if (json != NULL) {
-        printf("Parsed Data - Name: %s, Status: %s\n",
-               cJSON_GetObjectItem(json, "name")->valuestring,
-               cJSON_GetObjectItem(json, "status")->valuestring);
-        cJSON_Delete(json);
-    }
+    if (json == NULL) return 1;
+    printf("--- KET QUA PARSE JSON ---\n");
+    printf("Device: %s\n", cJSON_GetObjectItem(json, "name")->valuestring);
+    printf("Status: %s\n", cJSON_GetObjectItem(json, "status")->valuestring);
+    cJSON_Delete(json);
     return 0;
 }
 
@@ -410,6 +409,7 @@ Màn hình in ra chuỗi JSON
 {"ten_bai": "Bai Tap 03 - Ket hop", "tong": 150}
 
 ```
+
 
 
 
