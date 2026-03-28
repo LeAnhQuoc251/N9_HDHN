@@ -1,2 +1,1 @@
-# Embedded Operating System - Embedded OS
-
+# Embedded Operating System 
