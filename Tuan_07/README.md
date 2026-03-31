@@ -175,8 +175,6 @@ make
 
 ```
 
-Kết quả: tạo file `my_led_driver.ko`
-
 * * * * *
 
 2.4. Tạo và biên dịch chương trình User Space
