@@ -174,7 +174,7 @@ make clean
 make
 
 ```
-
+![demo](images/2.3images.jpg)
 * * * * *
 
 2.4. Tạo và biên dịch chương trình User Space
