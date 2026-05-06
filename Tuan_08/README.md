@@ -3,8 +3,7 @@ năng cơ bản - NHÓM 9
 --------------------------------
 
 * * * * *
-
-🎯 1. MỤC TIÊU
+1. MỤC TIÊU
 --------------
 
 -   Sử dụng các công cụ:
@@ -15,8 +14,7 @@ năng cơ bản - NHÓM 9
 -   Phát hiện lỗi và phân tích chương trình trên Linux
 
 * * * * *
-
-🔧 2. CHUẨN BỊ HỆ THỐNG (BUILDROOT)
+2. CHUẨN BỊ HỆ THỐNG (BUILDROOT)
 -----------------------------------
 
 ### Bước 1: Mở cấu hình
@@ -47,7 +45,7 @@ make
 
 * * * * *
 
-🧠 3. PHÂN TÍCH BỘ NHỚ (VALGRIND)
+3. PHÂN TÍCH BỘ NHỚ (VALGRIND)
 ---------------------------------
 
 ### Bước 1: Tạo chương trình lỗi
@@ -122,7 +120,7 @@ All heap blocks were freed -- no leaks are possible
 
 * * * * *
 
-💥 4. PHÂN TÍCH CORE DUMP
+4. PHÂN TÍCH CORE DUMP
 -------------------------
 
 ### Bước 1: Tạo chương trình crash
@@ -191,7 +189,7 @@ bt
 
 * * * * *
 
-⚡ 5. PHÂN TÍCH HIỆU NĂNG (PERF)
+5. PHÂN TÍCH HIỆU NĂNG (PERF)
 -------------------------------
 
 ### Bước 1: Cài công cụ
@@ -244,7 +242,7 @@ perf stat ./perf_test 2> perf_report.txtcat perf_report.txt
 
 * * * * *
 
-🔍 6. PHÂN TÍCH TRACING
+6. PHÂN TÍCH TRACING
 -----------------------
 
 ### Bước 1: Tạo chương trình
