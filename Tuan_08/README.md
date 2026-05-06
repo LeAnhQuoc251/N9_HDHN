@@ -1,5 +1,4 @@
-TUẦN 8 - Sử dụng các công cụ gỡ lỗi và đánh giá hiệu
-năng cơ bản - NHÓM 9
+TUẦN 8 - SỬ DỤNG CÁC CÔNG CỤ GỠ LỖI VÀ ĐÁNH GIÁ HIỆU NĂNG CƠ BẢN - NHÓM 9
 --------------------------------
 
 * * * * *
